@@ -1,12 +1,12 @@
 param CAFPrefix string
-param nameSeperator string  
+param nameSeparator string  
 param location string
 param tags object
 @secure()
 param adminPassword string
 
-var sqlServerName = toLower('${CAFPrefix}${nameSeperator}sql01')
-var databaseName = '${CAFPrefix}${nameSeperator}db01'
+var sqlServerName = toLower('${CAFPrefix}${nameSeparator}sql01')
+var databaseName = '${CAFPrefix}${nameSeparator}db01'
 
 resource server 'Microsoft.Sql/servers@2021-02-01-preview' = {
   name: sqlServerName

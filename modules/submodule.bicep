@@ -43,3 +43,38 @@ module virtualmachine 'resources/virtual_machine.bicep' = {
   }
 
 }
+
+module storageaccount 'resources/storage_account.bicep' = {
+  name: 'storageaccount'
+
+  params: {
+    CAFPrefix: CAFPrefix
+    nameSeparator: nameSeparator
+    location: location
+    tags: tags
+  }
+}
+
+module functionapp 'resources/function_app.bicep' = {
+  name: 'functionapp'
+
+  params: {
+    CAFPrefix: CAFPrefix
+    nameSeparator: nameSeparator
+    location: location
+    tags: tags
+  }
+}
+
+module database 'resources/database.bicep' = {
+  name: 'database'
+
+  params: {
+    CAFPrefix: CAFPrefix
+    nameSeparator: nameSeparator
+    location: location
+    tags: tags
+
+    adminPassword: adminPassword
+  }
+}

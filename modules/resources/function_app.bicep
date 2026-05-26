@@ -1,9 +1,9 @@
 param CAFPrefix string
-param nameSeperator string
+param nameSeparator string
 param location string
 param tags object
 
-var appServicePlanName = '${CAFPrefix}${nameSeperator}asp01'
+var appServicePlanName = '${CAFPrefix}${nameSeparator}asp01'
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2021-02-01' = {
   name: appServicePlanName

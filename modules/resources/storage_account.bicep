@@ -1,9 +1,9 @@
 param CAFPrefix string
-param nameSeperator string
+param nameSeparator string
 param location string
 param tags object
 
-var storageAccontName = toLower('${CAFPrefix}${nameSeperator}stg01')
+var storageAccontName = toLower('${CAFPrefix}${nameSeparator}stg01')
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2022-09-01' = {
   name: storageAccontName
