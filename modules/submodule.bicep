@@ -42,7 +42,4 @@ module virtualmachine 'resources/virtual_machine.bicep' = {
     adminPassword: adminPassword
   }
 
-  // dependsOn: [
-  //   virtualnetwork
-  // ]
 }
